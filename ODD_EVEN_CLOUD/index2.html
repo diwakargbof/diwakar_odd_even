@@ -1,0 +1,24 @@
+ <h1>Enter space seperated list of numbers:</h1>
+  <input id="nums" type="text" required="required" />
+  <button onclick="sum()">Get sum</button>
+  <h3 id="sum_e"></h3>
+  <h3 id="sum_o"></h3>
+
+  <script lang="javascript">
+    function sum() {
+     
+      sum_even=0;
+      sum_odd=0;
+      nums = document.getElementById("nums").value.split(" ");
+      for (i = 0; i < nums.length; i++) {
+          if(nums[i]%2==0)
+          sum_even+=parseInt(nums[i]);
+          else
+          sum_odd+=parseInt(nums[i]);
+          
+        }
+      document.getElementById("sum_e").innerHTML = sum_even;
+      document.getElementById("sum_o").innerHTML = sum_odd;
+      
+    }
+  </script>
